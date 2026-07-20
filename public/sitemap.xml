@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/pythonblog/tags/functions/</loc>
+    <lastmod>2026-07-20T10:52:46-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pythonblog/tags/intermediate/</loc>
+    <lastmod>2026-07-20T10:52:46-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pythonblog/</loc>
+    <lastmod>2026-07-20T10:52:46-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pythonblog/posts/</loc>
+    <lastmod>2026-07-20T10:52:46-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pythonblog/tags/python/</loc>
+    <lastmod>2026-07-20T10:52:46-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pythonblog/posts/python-decorators/</loc>
+    <lastmod>2026-07-20T10:52:46-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pythonblog/tags/</loc>
+    <lastmod>2026-07-20T10:52:46-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pythonblog/categories/</loc>
+  </url>
+</urlset>

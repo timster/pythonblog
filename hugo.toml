@@ -1,0 +1,4 @@
+baseURL = 'https://timster.github.io/pythonblog/'
+locale = 'en-us'
+title = 'My New Hugo Project'
+theme = 'ananke'
