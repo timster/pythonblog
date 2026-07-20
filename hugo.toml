@@ -1,4 +1,33 @@
 baseURL = 'https://indentedblock.com/'
-locale = 'en-us'
+languageCode = 'en-us'
 title = 'Indented Block'
 theme = 'PaperMod'
+paginate = 10
+
+[services.googleAnalytics]
+  ID = 'G-15MX54NJ4E'
+
+[params]
+  description = "Practical patterns for working developers"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowShareButtons = false
+  ShowRssButtonInSectionTermList = true
+  ShowToc = true
+  TocOpen = false
+
+[[params.socialIcons]]
+  name = "rss"
+  url = "/index.xml"
+
+[taxonomies]
+  tag = "tags"
+  series = "series"
+
+[[menus.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 10
