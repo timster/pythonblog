@@ -16,6 +16,10 @@ Include one or more "Real-world pattern:" sections that show practical, copy-pas
 
 End each article with a "Summary" section — a concise table or bullet list recapping the key concepts covered.
 
+# Planned articles
+
+Planned and published articles are tracked in `PLANNED_ARTICLES.md`. When an article is generated, move it from the Queue to the Published table with its date. When new articles are planned, add them to the Queue.
+
 # Commiting changes
 
 Use git commit with message "added article: <slug>".
