@@ -1,6 +1,6 @@
 +++
 date = '2026-07-20T10:52:46-04:00'
-draft = true
+draft = false
 title = 'Python Decorators: From Syntax Sugar to Real-World Patterns'
 description = 'A deep dive into Python decorators — how they work under the hood, common pitfalls, and patterns you can use today.'
 tags = ['python', 'intermediate', 'functions']
