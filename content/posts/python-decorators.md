@@ -2,11 +2,11 @@
 date = '2026-07-20T10:52:46-04:00'
 draft = false
 title = 'Python Decorators: From Syntax Sugar to Real-World Patterns'
-description = 'A deep dive into Python decorators — how they work under the hood, common pitfalls, and patterns you can use today.'
-tags = ['python', 'intermediate', 'functions']
+description = 'A deep dive into Python decorators: how they work under the hood, common pitfalls, and patterns you can use today.'
+tags = ['python', 'intermediate', 'language-features']
 +++
 
-If you've used Flask, pytest, or Django, you've used decorators. `@app.route`, `@pytest.fixture`, `@login_required` — they're everywhere. But most developers treat them as magic syntax without understanding what's actually happening. Once you do understand them, you'll start reaching for decorators in your own code.
+If you've used Flask, pytest, or Django, you've used decorators. `@app.route`, `@pytest.fixture`, `@login_required`: they're everywhere. But most developers treat them as magic syntax without understanding what's actually happening. Once you do understand them, you'll start reaching for decorators in your own code.
 
 ## What a decorator actually is
 
@@ -60,7 +60,7 @@ def add(a, b):
 add(1, 2)  # works, returns 3
 ```
 
-`*args` and `**kwargs` capture everything and forward it unchanged — this is the standard pattern for any decorator that doesn't need to inspect the arguments.
+`*args` and `**kwargs` capture everything and forward it unchanged; this is the standard pattern for any decorator that doesn't need to inspect the arguments.
 
 ## The `functools.wraps` problem
 
@@ -103,7 +103,7 @@ Always use `@functools.wraps`. There's no reason not to.
 
 ## Decorators with arguments
 
-What if you want to configure the decorator itself? `@app.route("/home")` passes an argument to the decorator — how does that work?
+What if you want to configure the decorator itself? `@app.route("/home")` passes an argument to the decorator: how does that work?
 
 You need an extra layer of nesting: a function that *returns* a decorator.
 
@@ -219,7 +219,7 @@ def fibonacci(n):
 fibonacci(35)  # fast
 ```
 
-Note: Python's standard library has `@functools.lru_cache` and `@functools.cache` which do this better (thread-safe, bounded size, support for `maxsize`). Use those in real code — but understanding how to build one yourself is worthwhile.
+Note: Python's standard library has `@functools.lru_cache` and `@functools.cache` which do this better (thread-safe, bounded size, support for `maxsize`). Use those in real code, but understanding how to build one yourself is worthwhile.
 
 ## Class-based decorators
 
@@ -252,7 +252,7 @@ The instance replaces the function, so `greet.count` works naturally.
 
 ## Stacking decorators
 
-You can apply multiple decorators to one function — they apply bottom-up:
+You can apply multiple decorators to one function: they apply bottom-up.
 
 ```python
 @timed
@@ -263,7 +263,7 @@ def fetch():
 
 This is equivalent to `fetch = timed(retry(times=3)(fetch))`. The `retry` decorator wraps `fetch` first, then `timed` wraps that. So the timer measures the total time including retries, not just one attempt.
 
-Order matters — swap them and you'd time a single attempt, with the retry happening invisibly outside the timer.
+Order matters: swap them and you'd time a single attempt, with the retry happening invisibly outside the timer.
 
 ## When to reach for a decorator
 
@@ -283,7 +283,7 @@ Where they're less appropriate: when the logic is so specific to one function th
 |---|---|
 | Basic decorator | A function that takes and returns a function |
 | `*args, **kwargs` | Forward arguments through the wrapper |
-| `@functools.wraps` | Preserve `__name__`, `__doc__`, and other metadata — always use it |
+| `@functools.wraps` | Preserve `__name__`, `__doc__`, and other metadata; always use it |
 | Decorator with args | Add an outer function that returns the decorator |
 | Stacking | Applies bottom-up; order matters |
 

@@ -54,7 +54,7 @@ Here's the sequence:
 1. `ManagedFile("file.txt")` creates the object.
 2. `__enter__` runs. Its return value is bound to `f`.
 3. The block body runs.
-4. `__exit__` runs — *always*, even if the block raised an exception.
+4. `__exit__` runs, *always*, even if the block raised an exception.
 
 This is exactly equivalent to:
 
@@ -88,7 +88,7 @@ with SuppressError():
 print("execution continues here")
 ```
 
-Returning `True` from `__exit__` tells Python "I've handled this, don't propagate it." Returning `False` (or `None`, the default) lets the exception continue up the call stack. This is a sharp edge — accidentally returning a truthy value from `__exit__` silently swallows real bugs.
+Returning `True` from `__exit__` tells Python "I've handled this, don't propagate it." Returning `False` (or `None`, the default) lets the exception continue up the call stack. This is a sharp edge: accidentally returning a truthy value from `__exit__` silently swallows real bugs.
 
 ## The easier way: `contextlib.contextmanager`
 
@@ -109,7 +109,7 @@ with managed_file("file.txt") as f:
     data = f.read()
 ```
 
-Everything before `yield` is `__enter__`. The yielded value is what gets bound by `as`. Everything after `yield` — wrapped in a `try`/`finally` — is `__exit__`. If the block raises, the exception surfaces at the `yield` line, so wrapping it in `try`/`finally` (or `try`/`except`) lets you clean up or suppress it exactly like a real `__exit__` would.
+Everything before `yield` is `__enter__`. The yielded value is what gets bound by `as`. Everything after `yield` (wrapped in a `try`/`finally`) is `__exit__`. If the block raises, the exception surfaces at the `yield` line, so wrapping it in `try`/`finally` (or `try`/`except`) lets you clean up or suppress it exactly like a real `__exit__` would.
 
 ```python
 @contextmanager
@@ -146,11 +146,11 @@ with transaction(db_connection) as cursor:
     cursor.execute("UPDATE accounts SET balance = balance + 100 WHERE id = %s", (2,))
 ```
 
-If either `execute` call raises, the transaction rolls back automatically. If both succeed, it commits. The caller never writes `try`/`except`/`finally` themselves — the context manager owns that responsibility.
+If either `execute` call raises, the transaction rolls back automatically. If both succeed, it commits. The caller never writes `try`/`except`/`finally` themselves; the context manager owns that responsibility.
 
 ## Real-world pattern: temporarily changing state
 
-A very common use case: change something, run code, then guarantee it's restored — regardless of what happens in between.
+A very common use case: change something, run code, then guarantee it's restored, regardless of what happens in between.
 
 ```python
 import os
@@ -197,7 +197,7 @@ Cleaner than a decorator when you only want to time part of a function rather th
 
 ## Real-world pattern: locks and concurrency
 
-`threading.Lock`, `asyncio.Lock`, and friends are context managers for exactly this reason — you never want to acquire a lock without a guaranteed release:
+`threading.Lock`, `asyncio.Lock`, and friends are context managers for exactly this reason: you never want to acquire a lock without a guaranteed release.
 
 ```python
 import threading
@@ -229,11 +229,11 @@ with (
     outfile.write(infile.read().upper())
 ```
 
-They nest in order — `outfile` is guaranteed to close before `infile` does, and both close even if the write fails.
+They nest in order: `outfile` is guaranteed to close before `infile` does, and both close even if the write fails.
 
 ## `contextlib.ExitStack` for a dynamic number of resources
 
-Sometimes you don't know how many context managers you need until runtime — e.g., opening a variable list of files:
+Sometimes you don't know how many context managers you need until runtime, e.g., opening a variable list of files:
 
 ```python
 from contextlib import ExitStack
@@ -246,7 +246,7 @@ def concatenate_files(paths, output_path):
                 out.write(f.read())
 ```
 
-`ExitStack` tracks every context manager pushed onto it with `enter_context` and closes them all, in reverse order, when the `with` block exits — even if the list of paths is empty or built dynamically.
+`ExitStack` tracks every context manager pushed onto it with `enter_context` and closes them all, in reverse order, when the `with` block exits, even if the list of paths is empty or built dynamically.
 
 ## Summary
 
@@ -255,8 +255,8 @@ def concatenate_files(paths, output_path):
 | `with` statement | Guarantees cleanup runs even if an exception occurs |
 | `__enter__` | Runs on entry; its return value is bound by `as` |
 | `__exit__(exc_type, exc_value, tb)` | Runs on exit; return `True` to suppress the exception, `False`/`None` to propagate it |
-| `@contextlib.contextmanager` | Turn a generator into a context manager — code before `yield` is `__enter__`, code after (in `try`/`finally`) is `__exit__` |
+| `@contextlib.contextmanager` | Turn a generator into a context manager: code before `yield` is `__enter__`, code after (in `try`/`finally`) is `__exit__` |
 | Multiple managers | `with a, b:` nests them; both clean up even if the block fails |
 | `contextlib.ExitStack` | Manage a dynamic, runtime-determined number of context managers |
 
-The pattern to remember: anything with a "must clean up no matter what" shape — files, locks, connections, transactions, temporary state — is a candidate for a context manager.
+The pattern to remember: anything with a "must clean up no matter what" shape (files, locks, connections, transactions, temporary state) is a candidate for a context manager.
