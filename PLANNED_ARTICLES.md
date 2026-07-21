@@ -16,7 +16,6 @@
 
 | # | Type | Title | Slug |
 |---|------|-------|------|
-| 1 | Plain | Context Managers: The `with` Statement Demystified | `python-context-managers` |
 | 2 | Package Highlight | Rich: Beautiful Terminal Output in Python | `package-rich` |
 | 3 | Plain | Python Type Hints in Practice | `python-type-hints` |
 | 4 | Package Highlight | Pydantic: Data Validation the Right Way | `package-pydantic` |
@@ -32,3 +31,4 @@
 | Title | Slug | Date |
 |-------|------|------|
 | Python Decorators: From Syntax Sugar to Real-World Patterns | `python-decorators` | 2026-07-20 |
+| Context Managers: The `with` Statement Demystified | `python-context-managers` | 2026-07-21 |
