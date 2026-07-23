@@ -32,3 +32,4 @@
 | Python Decorators: From Syntax Sugar to Real-World Patterns | `python-decorators` | 2026-07-20 |
 | Context Managers: The `with` Statement Demystified | `python-context-managers` | 2026-07-21 |
 | Rich: Beautiful Terminal Output in Python | `package-rich` | 2026-07-23 |
+| Python Pattern Matching: Beyond the Basic match Statement | `python-pattern-matching` | 2026-07-24 |
