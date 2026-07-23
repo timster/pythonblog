@@ -14,17 +14,16 @@
 
 ## Queue
 
-| # | Type | Title | Slug |
-|---|------|-------|------|
-| 3 | Package Highlight | Rich: Beautiful Terminal Output in Python | `package-rich` |
-| 4 | Plain | Python Type Hints in Practice | `python-type-hints` |
-| 5 | Package Highlight | Pydantic: Data Validation the Right Way | `package-pydantic` |
-| 6 | Series (1/3) | Building a CLI Tool in Python: Structure & Typer | `cli-tool-part-1` |
-| 7 | Series (2/3) | Building a CLI Tool in Python: Config Files & Packaging | `cli-tool-part-2` |
-| 8 | Series (3/3) | Building a CLI Tool in Python: Publishing to PyPI | `cli-tool-part-3` |
-| 9 | Plain | Generators and Iterators: Lazy Evaluation in Python | `python-generators` |
-| 10 | Package Highlight | Polars: A Faster Pandas | `package-polars` |
-| 11 | Plain | Python Logging Done Right | `python-logging` |
+| Type | Title | Slug |
+|------|-------|------|
+| Plain | Python Type Hints in Practice | `python-type-hints` |
+| Package Highlight | Pydantic: Data Validation the Right Way | `package-pydantic` |
+| Series (1/3) | Building a CLI Tool in Python: Structure & Typer | `cli-tool-part-1` |
+| Series (2/3) | Building a CLI Tool in Python: Config Files & Packaging | `cli-tool-part-2` |
+| Series (3/3) | Building a CLI Tool in Python: Publishing to PyPI | `cli-tool-part-3` |
+| Plain | Generators and Iterators: Lazy Evaluation in Python | `python-generators` |
+| Package Highlight | Polars: A Faster Pandas | `package-polars` |
+| Plain | Python Logging Done Right | `python-logging` |
 
 ## Published
 
@@ -32,3 +31,4 @@
 |-------|------|------|
 | Python Decorators: From Syntax Sugar to Real-World Patterns | `python-decorators` | 2026-07-20 |
 | Context Managers: The `with` Statement Demystified | `python-context-managers` | 2026-07-21 |
+| Rich: Beautiful Terminal Output in Python | `package-rich` | 2026-07-23 |
