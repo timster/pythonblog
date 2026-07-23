@@ -3,7 +3,7 @@ date = '2026-07-21T10:25:03-04:00'
 draft = false
 title = "Context Managers: The `with` Statement Demystified"
 description = 'How the with statement actually works under the hood, how to build your own context managers, and the real-world patterns that make them worth learning.'
-tags = ['python', 'intermediate', 'language-features']
+tags = ['python', 'language-features']
 +++
 
 You've written `with open("file.txt") as f:` a thousand times. But what does `with` actually do? Why does the file close even if an exception is raised inside the block? Once you understand the protocol behind it, you can apply the same pattern to database connections, locks, timers, temporary state changes, or anything with a "setup, then guaranteed teardown" shape.

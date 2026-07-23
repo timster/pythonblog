@@ -3,7 +3,7 @@ date = '2026-07-20T10:52:46-04:00'
 draft = false
 title = 'Python Decorators: From Syntax Sugar to Real-World Patterns'
 description = 'A deep dive into Python decorators: how they work under the hood, common pitfalls, and patterns you can use today.'
-tags = ['python', 'intermediate', 'language-features']
+tags = ['python', 'language-features']
 +++
 
 If you've used Flask, pytest, or Django, you've used decorators. `@app.route`, `@pytest.fixture`, `@login_required`: they're everywhere. But most developers treat them as magic syntax without understanding what's actually happening. Once you do understand them, you'll start reaching for decorators in your own code.

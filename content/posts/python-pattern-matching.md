@@ -3,7 +3,7 @@ date = '2026-07-24T09:00:00-04:00'
 draft = true
 title = 'Python Pattern Matching: Beyond the Basic match Statement'
 description = 'A deep dive into structural pattern matching in Python: match/case syntax, sequence, mapping, and class patterns, guard clauses, and real-world uses for dispatching, payload routing, and AST-style processing.'
-tags = ['python', 'pattern-matching', 'match-case', 'control-flow']
+tags = ['python', 'language-features']
 +++
 
 Python 3.10 added the `match` statement, and a lot of people took one look at it and filed it away as "Python finally got a switch statement." That's a disservice to what it actually does. A `switch` statement compares a value against other values. `match` compares the *shape* of data against a pattern, binds variables as it goes, and can reach inside nested structures in a single expression. It's closer to pattern matching in Rust or Haskell than to `switch` in C.

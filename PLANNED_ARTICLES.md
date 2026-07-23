@@ -12,6 +12,24 @@
 | **TIL** | Short "Today I Learned" format. A single surprising or non-obvious Python behavior or trick. Good for maintaining cadence between longer posts. |
 | **Cookbook** | A collection of patterns or recipes for a specific use case (e.g. "10 ways to flatten a list"). Skimmable, reference-style. |
 
+## Tags
+
+Python-specific articles get `python` plus 1-3 topic tags from this list. Once general software-dev articles (non-Python) start appearing, `python` is omitted for those. Do not invent new tags; if a topic doesn't fit, add it here first.
+
+| Tag | Covers |
+|-----|--------|
+| `python` | Every article (core language identifier) |
+| `language-features` | Syntax/semantics: decorators, context managers, pattern matching, generators, type hints |
+| `packages` | Package highlight/comparison articles |
+| `cli` | Building or working with command-line tools |
+| `data` | Data handling, validation, dataframes, serialization |
+| `performance` | Speed, memory, profiling |
+| `concurrency` | Async, threading, multiprocessing |
+| `testing` | Testing, mocking, pytest |
+| `web` | Web frameworks, HTTP, APIs |
+| `tooling` | Dev tooling, packaging/publishing, logging |
+| `best-practices` | Style, idioms, patterns not tied to one feature |
+
 ## Queue
 
 | Type | Title | Slug |
