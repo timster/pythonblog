@@ -254,3 +254,5 @@ None of this is an argument to avoid PyPI. A few signals that the stdlib module 
 - **`secrets` for anything beyond tokens and OTPs.** It's not a general cryptography library; for hashing, signing, or encryption, reach for `hashlib`/`hmac` or a library like `cryptography`.
 
 For everyday problems, sorted inserts, type-based dispatch, variable-length resource cleanup, dependency ordering, iterator plumbing, secure tokens, and fuzzy matching, the standard library modules above are usually a better first move than an import from PyPI.
+
+None of these modules are hidden. They're one `import` away, fully documented, and battle-tested by every Python installation on the planet. The only thing standing between you and them is the habit of checking the stdlib before reaching for `pip install`. Next time you're about to write a binary search by hand or add a dependency for a topological sort, take a second look at what's already sitting in your Python installation.
