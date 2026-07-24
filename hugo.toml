@@ -1,5 +1,4 @@
 baseURL = 'https://indentedblock.com/'
-languageCode = 'en-us'
 title = 'Indented Block'
 theme = 'PaperMod'
 paginate = 10
@@ -26,6 +25,16 @@ paginate = 10
 [taxonomies]
   tag = "tags"
   series = "series"
+
+[[menus.main]]
+  name = "About"
+  url = "/about/"
+  weight = 5
+
+[[menus.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 6
 
 [[menus.main]]
   name = "Tags"
