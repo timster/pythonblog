@@ -51,3 +51,4 @@ Python-specific articles get `python` plus 1-3 topic tags from this list. Once g
 | Context Managers: The `with` Statement Demystified | `python-context-managers` | 2026-07-21 |
 | Rich: Beautiful Terminal Output in Python | `package-rich` | 2026-07-23 |
 | Python Pattern Matching: Beyond the Basic match Statement | `python-pattern-matching` | 2026-07-24 |
+| The Most Underrated Packages in the Python Standard Library | `underrated-stdlib-packages` | 2026-07-24 |
