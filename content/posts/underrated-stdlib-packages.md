@@ -81,7 +81,7 @@ This is the same shape you'll find in serialization libraries, visitor patterns 
 
 ## `contextlib`: more than `@contextmanager`
 
-Most people know `contextlib.contextmanager` for turning a generator into a context manager. Two less-visited tools in the same module solve problems that otherwise turn into boilerplate.
+Most people know `contextlib.contextmanager` for turning a generator into a context manager (see my [context managers article]({{< ref "python-context-managers" >}}) for a full walkthrough of that pattern). Two less-visited tools in the same module solve problems that otherwise turn into boilerplate.
 
 `suppress` replaces a `try/except/pass` block that exists purely to ignore an expected exception:
 
@@ -254,16 +254,3 @@ None of this is an argument to avoid PyPI. A few signals that the stdlib module 
 - **`secrets` for anything beyond tokens and OTPs.** It's not a general cryptography library; for hashing, signing, or encryption, reach for `hashlib`/`hmac` or a library like `cryptography`.
 
 For everyday problems, sorted inserts, type-based dispatch, variable-length resource cleanup, dependency ordering, iterator plumbing, secure tokens, and fuzzy matching, the standard library modules above are usually a better first move than an import from PyPI.
-
-## Summary
-
-| Module | Solves | Reach for it when |
-|---|---|---|
-| `bisect` | Sorted insertion and lookup via binary search | You need "which bucket" or "where does this go" logic |
-| `functools.singledispatch` | Type-based dispatch without `isinstance` chains | New types need to plug into existing logic without editing it |
-| `contextlib.suppress` | Ignoring one expected exception type | Replacing a `try/except/pass` block |
-| `contextlib.ExitStack` | Managing a variable number of context managers | The count of resources to clean up isn't known until runtime |
-| `graphlib.TopologicalSorter` | Dependency ordering and incremental task scheduling | Building a task runner, build system, or pipeline |
-| `itertools` | Lazy iterator composition (`groupby`, `chain`, `islice`) | Grouping, flattening, or paginating without loading everything into memory |
-| `secrets` | Cryptographically secure tokens and constant-time comparison | Session tokens, API keys, OTPs, password reset links |
-| `difflib` | Sequence diffing and fuzzy string matching | Readable diffs or "did you mean" suggestions |
