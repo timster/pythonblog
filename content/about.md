@@ -15,7 +15,7 @@ Indented Block is a blog about writing better code. Mostly Python, occasionally 
 
 ## Who it's for
 
-Developers who already know how to write code and want to write it more deliberately — fewer footguns, clearer intent, less magic.
+Developers who already know how to write code and want to write it more deliberately. Fewer footguns, clearer intent, less magic.
 
 ## Get in touch
 
