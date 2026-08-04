@@ -14,7 +14,8 @@ Add `title`, `description`, and `tags` frontmatter.
 
 Include one or more "Real-world pattern:" sections that show practical, copy-paste-ready examples of the concept being discussed. These should demonstrate how the topic is actually used in production code, not just toy examples.
 
-End each article with a "Summary" section — a concise table or bullet list recapping the key concepts covered.
+
+If you think it makes sense, end the article with a "Summary" section — a concise table or bullet list recapping the key concepts covered.
 
 # Planned articles
 
