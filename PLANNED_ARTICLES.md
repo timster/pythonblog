@@ -34,7 +34,6 @@ Python-specific articles get `python` plus 1-3 topic tags from this list. Once g
 
 | Type | Title | Slug |
 |------|-------|------|
-| Series (1/3) | Building a CLI Tool in Python: Structure & Typer | `cli-tool-part-1` |
 | Series (2/3) | Building a CLI Tool in Python: Config Files & Packaging | `cli-tool-part-2` |
 | Series (3/3) | Building a CLI Tool in Python: Publishing to PyPI | `cli-tool-part-3` |
 | Plain | Generators and Iterators: Lazy Evaluation in Python | `python-generators` |
@@ -52,3 +51,4 @@ Python-specific articles get `python` plus 1-3 topic tags from this list. Once g
 | The Most Underrated Packages in the Python Standard Library | `underrated-stdlib-packages` | 2026-07-24 |
 | Python Type Hints in Practice | `python-type-hints` | 2026-07-27 |
 | Pydantic: Data Validation the Right Way | `package-pydantic` | 2026-07-29 |
+| Building a CLI Tool in Python: Structure & Typer | `cli-tool-part-1` | 2026-08-04 |
